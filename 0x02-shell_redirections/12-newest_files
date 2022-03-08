@@ -1,2 +1,2 @@
 #!/bin/bash
-ls -1t | head -10
+cat list | sort | uniq -c | grep -e '^\s.*1\s' | awk '{print $NF}'
